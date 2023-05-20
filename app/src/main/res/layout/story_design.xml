@@ -58,7 +58,7 @@
         android:layout_alignParentEnd="true"
         android:gravity="center"
         android:layout_marginRight="10dp"
-        android:src="@drawable/playicon"
+
 
 
         />

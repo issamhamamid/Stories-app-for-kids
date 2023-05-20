@@ -1,14 +1,26 @@
 package com.example.PROJETTP;
 
-public class StoryModel {
+import android.os.Parcel;
+import android.os.Parcelable;
 
-    private int image;
-    private String titre;
+import androidx.annotation.NonNull;
 
-    public StoryModel(int image, String titre) {
+public class StoryModel  {
+
+    int image;
+   String titre;
+
+   Scene[] scenes;
+
+   boolean favoriteStatus;
+
+    public StoryModel(int image, String titre, Scene[] scenes, boolean favoriteStatus) {
         this.image = image;
         this.titre = titre;
+        this.scenes = scenes;
+        this.favoriteStatus = favoriteStatus;
     }
+
 
     public int getImage() {
         return image;
@@ -18,12 +30,13 @@ public class StoryModel {
         return titre;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+    public Scene[] getScenes() {
+        return scenes;
     }
 
-    public void setTitre(String titre) {
-        this.titre = titre;
+    public boolean isFavoriteStatus() {
+        return favoriteStatus;
     }
+
 
 }
